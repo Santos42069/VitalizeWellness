@@ -1,0 +1,51 @@
+# ─────────────────────────────────────────────
+# SECRETS — never commit these
+# ─────────────────────────────────────────────
+.env
+.env.local
+.env.production
+.env.*.local
+
+# If you hard-code credentials directly in config.js,
+# uncomment the line below to keep it out of the repo.
+# config.js
+
+# ─────────────────────────────────────────────
+# Node
+# ─────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+
+# ─────────────────────────────────────────────
+# OS & Editor
+# ─────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# ─────────────────────────────────────────────
+# Build / Deploy artifacts
+# ─────────────────────────────────────────────
+dist/
+build/
+.netlify/
+.cache/
+
+# ─────────────────────────────────────────────
+# Logs
+# ─────────────────────────────────────────────
+*.log
+logs/
