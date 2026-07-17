@@ -42,6 +42,34 @@ if (nav) {
   window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
 }
 
+/* ── Mobile hamburger menu ── */
+const hamburger  = document.getElementById('nav-hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+const overlay    = document.getElementById('mobile-menu-overlay');
+
+function openMenu() {
+  hamburger?.classList.add('open');
+  mobileMenu?.classList.add('open');
+  overlay?.classList.add('open');
+  document.body.classList.add('menu-open');
+  hamburger?.setAttribute('aria-expanded', 'true');
+}
+
+function closeMenu() {
+  hamburger?.classList.remove('open');
+  mobileMenu?.classList.remove('open');
+  overlay?.classList.remove('open');
+  document.body.classList.remove('menu-open');
+  hamburger?.setAttribute('aria-expanded', 'false');
+}
+
+hamburger?.addEventListener('click', () => {
+  mobileMenu?.classList.contains('open') ? closeMenu() : openMenu();
+});
+overlay?.addEventListener('click', closeMenu);
+mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+window.addEventListener('resize', () => { if (window.innerWidth > 900) closeMenu(); });
+
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
