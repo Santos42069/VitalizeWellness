@@ -1,0 +1,30 @@
+# Vitalize Wellness — .gitignore
+# ─────────────────────────────────────────────────────────────────────────────
+# CRITICAL: config.js contains your EmailJS keys and image paths.
+# Never commit it to a public repository.
+# Each developer keeps their own local copy.
+# Production values are set via your host's environment variable dashboard.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Environment / secrets
+.env
+.env.local
+.env.production
+config.js          # ← contains EmailJS keys — NEVER commit
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local image directories (never use file:// paths in production)
+images/local/
+
+# Local Netlify folder
+.netlify

@@ -1,0 +1,40 @@
+# Vitalize Wellness — Netlify HTTP Security Headers
+# ─────────────────────────────────────────────────────────────────────────────
+# These HTTP-level headers are the CANONICAL security layer.
+# The <meta> CSP tags in the HTML are a fallback for non-Netlify deployments.
+#
+# Deploy: place this file in your project root.
+# Netlify will apply these headers automatically on every response.
+#
+# For other hosts:
+#   Vercel  → vercel.json "headers" array
+#   Apache  → .htaccess Header / mod_headers
+#   Nginx   → add_header directives in server {} block
+# ─────────────────────────────────────────────────────────────────────────────
+
+/*
+  # ── Content Security Policy ─────────────────────────────────────────────
+  # Restricts which resources the browser may load.
+  # Tighten further once you know your exact CDN domains.
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.emailjs.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
+
+  # ── Clickjacking protection ──────────────────────────────────────────────
+  X-Frame-Options: DENY
+
+  # ── MIME-type sniffing ───────────────────────────────────────────────────
+  X-Content-Type-Options: nosniff
+
+  # ── XSS auditor (legacy browsers) ───────────────────────────────────────
+  X-XSS-Protection: 1; mode=block
+
+  # ── Referrer policy ─────────────────────────────────────────────────────
+  # Sends origin only to same-origin; full URL to same-origin; nothing cross-origin
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # ── Permissions policy (formerly Feature-Policy) ────────────────────────
+  # Disable browser APIs this site doesn't need
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+
+  # ── HSTS (only enable if you have HTTPS — Netlify does by default) ───────
+  # max-age = 1 year; includeSubDomains; preload (submit to hstspreload.org)
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload

@@ -1,0 +1,11 @@
+{
+  "name": "vitalize-wellness-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "check": "node --check netlify/functions/contact.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
