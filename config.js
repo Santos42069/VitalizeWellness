@@ -67,7 +67,7 @@ const VWConfig = {
    */
   images: {
     // index.html
-    'hero-main': 'https://media.canva.com/v2/image-resize/format:PNG/height:863/quality:100/uri:ifs%3A%2F%2FM%2F1778e08f-4853-4645-841e-7a1de92dac72/watermark:F/width:1823?csig=AAAAAAAAAAAAAAAAAAAAACSoY72EUpuPJ77mhWJ1hL4QPvaiV8QcnLkVTPRrFsI9&exp=1782246196&osig=AAAAAAAAAAAAAAAAAAAAAHqesruLjsmU6iVBRETwFDS3dNEKXqTWEopoqjZrvLUR&signer=media-rpc&x-canva-quality=screen_3x', // e.g. 'images/hero.jpg' or 'https://cdn.example.com/hero.jpg'
+    'hero-main': 'images/hero.jpg', // e.g. 'images/hero.jpg' or 'https://cdn.example.com/hero.jpg'
     'why':       'images/zbtok.jpg',
     'facial':    'images/BZLE3.jpg',
 
