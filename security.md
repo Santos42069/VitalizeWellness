@@ -47,11 +47,6 @@ This site uses a layered client-side defence-in-depth stack. See the main [READM
 - **Never** remove the honeypot field from `contact.html`
 - **Never** skip the `Validator.validate()` call before sending an email
 
-### EmailJS Public Key
-
-The EmailJS `publicKey` is intentionally client-side — it only allows sending emails through your pre-approved templates. It cannot read emails, access account data, or be used to send to arbitrary addresses. This is consistent with EmailJS's documented security model.
-
----
 
 ## OWASP References
 
