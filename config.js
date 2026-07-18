@@ -67,7 +67,7 @@ const VWConfig = {
    */
   images: {
     // index.html
-    'hero-main': 'images/hero.jpg', // e.g. 'images/hero.jpg' or 'https://cdn.example.com/hero.jpg'
+    'hero-main': 'images/hero1.jpg', // e.g. 'images/hero.jpg' or 'https://cdn.example.com/hero.jpg'
     'why':       'images/zbtok.jpg',
     'facial':    'images/BZLE3.jpg',
 
