@@ -16,7 +16,6 @@
   # ── Content Security Policy ─────────────────────────────────────────────
   # Restricts which resources the browser may load.
   # Tighten further once you know your exact CDN domains.
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.emailjs.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
 
   # ── Clickjacking protection ──────────────────────────────────────────────
   X-Frame-Options: DENY
